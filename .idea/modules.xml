@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-admin-interface/onlinelearn-admin-interface.iml" filepath="$PROJECT_DIR$/onlinelearn-admin-interface/onlinelearn-admin-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-admin-service/onlinelearn-admin-service.iml" filepath="$PROJECT_DIR$/onlinelearn-admin-service/onlinelearn-admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-admin-web/onlinelearn-admin-web.iml" filepath="$PROJECT_DIR$/onlinelearn-admin-web/onlinelearn-admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-client-interface/onlinelearn-client-interface.iml" filepath="$PROJECT_DIR$/onlinelearn-client-interface/onlinelearn-client-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-client-service/onlinelearn-client-service.iml" filepath="$PROJECT_DIR$/onlinelearn-client-service/onlinelearn-client-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-client-web/onlinelearn-client-web.iml" filepath="$PROJECT_DIR$/onlinelearn-client-web/onlinelearn-client-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-common/onlinelearn-common.iml" filepath="$PROJECT_DIR$/onlinelearn-common/onlinelearn-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-dao/onlinelearn-dao.iml" filepath="$PROJECT_DIR$/onlinelearn-dao/onlinelearn-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-parent.iml" filepath="$PROJECT_DIR$/onlinelearn-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-pojo/onlinelearn-pojo.iml" filepath="$PROJECT_DIR$/onlinelearn-pojo/onlinelearn-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onlinelearn-solr-util/onlinelearn-solr-util.iml" filepath="$PROJECT_DIR$/onlinelearn-solr-util/onlinelearn-solr-util.iml" />
+    </modules>
+  </component>
+</project>

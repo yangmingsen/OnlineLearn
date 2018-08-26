@@ -1,0 +1,13 @@
+10.0.0.21 - - [24/Jul/2018:10:02:39 +0800] "GET /question/findAll.do HTTP/1.1" 500 13689 http-bio-8101-exec-1 5803
+10.0.0.21 - - [24/Jul/2018:10:02:39 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8101-exec-2 11
+10.0.0.21 - - [24/Jul/2018:10:05:54 +0800] "GET /course/findAll.do HTTP/1.1" 500 13689 http-bio-8101-exec-6 238
+10.0.0.21 - - [24/Jul/2018:10:09:35 +0800] "GET /course/findAll.do HTTP/1.1" 200 1524 http-bio-8101-exec-1 6804
+10.0.0.21 - - [24/Jul/2018:10:09:44 +0800] "GET /question/findAll.do HTTP/1.1" 500 23222 http-bio-8101-exec-4 39
+10.0.0.21 - - [24/Jul/2018:10:12:05 +0800] "GET /question/findAll.do HTTP/1.1" 200 2181 http-bio-8101-exec-1 6789
+10.0.0.21 - - [24/Jul/2018:10:28:40 +0800] "GET /replier/findByTopicId.do?id=1 HTTP/1.1" 200 5042 http-bio-8101-exec-1 7070
+10.0.0.21 - - [24/Jul/2018:10:28:57 +0800] "GET /replier/findByTopicId.do?id=1 HTTP/1.1" 200 5042 http-bio-8101-exec-2 21
+10.0.0.21 - - [24/Jul/2018:10:37:57 +0800] "GET /user/findOne.do?username=yms@qq.com HTTP/1.1" 200 393 http-bio-8101-exec-4 21
+10.0.0.21 - - [24/Jul/2018:11:17:27 +0800] "POST /question/add.do HTTP/1.1" 500 5981 http-bio-8101-exec-1 6380
+10.0.0.21 - - [24/Jul/2018:11:18:52 +0800] "GET /question/findAll.do HTTP/1.1" 200 2181 http-bio-8101-exec-2 426
+10.0.0.21 - - [24/Jul/2018:11:18:52 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8101-exec-3 2
+10.0.0.21 - - [24/Jul/2018:11:19:50 +0800] "POST /question/add.do HTTP/1.1" 200 41 http-bio-8101-exec-5 28

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.onlinelearn.mapper.CeCourseMapper" >
+  <resultMap id="BaseResultMap" type="com.onlinelearn.pojo.CeCourse" >
+    <id column="source_id" property="sourceId" jdbcType="INTEGER" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="direction_id" property="directionId" jdbcType="INTEGER" />
+    <result column="difficulty_level" property="difficultyLevel" jdbcType="VARCHAR" />
+    <result column="learn_num" property="learnNum" jdbcType="INTEGER" />
+    <result column="small_pic" property="smallPic" jdbcType="VARCHAR" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    source_id, description, name, category, direction_id, difficulty_level, learn_num, 
+    small_pic, add_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.onlinelearn.pojo.CeCourseExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ce_course
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ce_course
+    where source_id = #{sourceId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ce_course
+    where source_id = #{sourceId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.onlinelearn.pojo.CeCourseExample" >
+    delete from ce_course
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.onlinelearn.pojo.CeCourse" >
+    insert into ce_course (source_id, description, name, 
+      category, direction_id, difficulty_level, 
+      learn_num, small_pic, add_time
+      )
+    values (#{sourceId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{category,jdbcType=VARCHAR}, #{directionId,jdbcType=INTEGER}, #{difficultyLevel,jdbcType=VARCHAR}, 
+      #{learnNum,jdbcType=INTEGER}, #{smallPic,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.onlinelearn.pojo.CeCourse" >
+    insert into ce_course
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sourceId != null" >
+        source_id,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+      <if test="directionId != null" >
+        direction_id,
+      </if>
+      <if test="difficultyLevel != null" >
+        difficulty_level,
+      </if>
+      <if test="learnNum != null" >
+        learn_num,
+      </if>
+      <if test="smallPic != null" >
+        small_pic,
+      </if>
+      <if test="addTime != null" >
+        add_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sourceId != null" >
+        #{sourceId,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="directionId != null" >
+        #{directionId,jdbcType=INTEGER},
+      </if>
+      <if test="difficultyLevel != null" >
+        #{difficultyLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="learnNum != null" >
+        #{learnNum,jdbcType=INTEGER},
+      </if>
+      <if test="smallPic != null" >
+        #{smallPic,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.onlinelearn.pojo.CeCourseExample" resultType="java.lang.Integer" >
+    select count(*) from ce_course
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ce_course
+    <set >
+      <if test="record.sourceId != null" >
+        source_id = #{record.sourceId,jdbcType=INTEGER},
+      </if>
+      <if test="record.description != null" >
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.category != null" >
+        category = #{record.category,jdbcType=VARCHAR},
+      </if>
+      <if test="record.directionId != null" >
+        direction_id = #{record.directionId,jdbcType=INTEGER},
+      </if>
+      <if test="record.difficultyLevel != null" >
+        difficulty_level = #{record.difficultyLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.learnNum != null" >
+        learn_num = #{record.learnNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.smallPic != null" >
+        small_pic = #{record.smallPic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addTime != null" >
+        add_time = #{record.addTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ce_course
+    set source_id = #{record.sourceId,jdbcType=INTEGER},
+      description = #{record.description,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      category = #{record.category,jdbcType=VARCHAR},
+      direction_id = #{record.directionId,jdbcType=INTEGER},
+      difficulty_level = #{record.difficultyLevel,jdbcType=VARCHAR},
+      learn_num = #{record.learnNum,jdbcType=INTEGER},
+      small_pic = #{record.smallPic,jdbcType=VARCHAR},
+      add_time = #{record.addTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.onlinelearn.pojo.CeCourse" >
+    update ce_course
+    <set >
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="category != null" >
+        category = #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="directionId != null" >
+        direction_id = #{directionId,jdbcType=INTEGER},
+      </if>
+      <if test="difficultyLevel != null" >
+        difficulty_level = #{difficultyLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="learnNum != null" >
+        learn_num = #{learnNum,jdbcType=INTEGER},
+      </if>
+      <if test="smallPic != null" >
+        small_pic = #{smallPic,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        add_time = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where source_id = #{sourceId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.onlinelearn.pojo.CeCourse" >
+    update ce_course
+    set description = #{description,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      category = #{category,jdbcType=VARCHAR},
+      direction_id = #{directionId,jdbcType=INTEGER},
+      difficulty_level = #{difficultyLevel,jdbcType=VARCHAR},
+      learn_num = #{learnNum,jdbcType=INTEGER},
+      small_pic = #{smallPic,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=TIMESTAMP}
+    where source_id = #{sourceId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:03:58 +0800] "GET /course/findAll.do HTTP/1.1" 200 680 http-bio-8101-exec-1 6937
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:03:59 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8101-exec-5 3
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:07:20 +0800] "GET /course/findAll.do HTTP/1.1" 200 680 http-bio-8101-exec-7 18
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:07:21 +0800] "GET /course/findAll.do HTTP/1.1" 200 680 http-bio-8101-exec-10 18
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:07:22 +0800] "GET /course/findAll.do HTTP/1.1" 200 680 http-bio-8101-exec-10 14
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:07:34 +0800] "GET /course/findAll.do HTTP/1.1" 200 680 http-bio-8101-exec-10 11
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:07:55 +0800] "GET /course/findAll.do HTTP/1.1" 200 680 http-bio-8101-exec-2 7
+0:0:0:0:0:0:0:1 - - [18/Jul/2018:08:10:07 +0800] "GET /course/findAll.do HTTP/1.1" 200 700 http-bio-8101-exec-1 6578
