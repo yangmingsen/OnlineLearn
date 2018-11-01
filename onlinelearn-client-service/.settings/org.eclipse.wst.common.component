@@ -4,18 +4,6 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="onlinelearn-dao-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlinelearn-dao/onlinelearn-dao">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="onlinelearn-pojo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlinelearn-pojo/onlinelearn-pojo">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="onlinelearn-client-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlinelearn-client-interface/onlinelearn-client-interface">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="onlinelearn-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/onlinelearn-common/onlinelearn-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="onlinelearn-client-service"/>
         <property name="java-output-path" value="/onlinelearn-client-service/target/classes"/>
     </wb-module>
